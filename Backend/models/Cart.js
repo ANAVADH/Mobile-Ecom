@@ -1,0 +1,46 @@
+const mongoose = require("mongoose");
+
+const CartSchema = new mongoose.Schema(
+  {
+    userId: { type: String, required: true },
+    products: [
+      {
+        productId: {
+          type: String,
+        },
+        quantity: {
+          type: Number,
+          default: 1,
+        },
+      },
+    ],
+    shippingAddress:[
+
+      {
+        fullName: {
+          type: String,
+        },
+        address: {
+          type: String,
+          
+        },
+        city: {
+          type: String,
+          
+        },
+        postalCode: {
+          type: Number,
+          
+        },
+        country: {
+          type: String,
+          
+        },
+      },
+
+    ],
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("Cart", CartSchema);
