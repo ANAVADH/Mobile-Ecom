@@ -1,2 +1,5 @@
 Backend/.env
 ecom/.env
+Backend/node_modules
+ecom/node_modules
+admin/node_modules
