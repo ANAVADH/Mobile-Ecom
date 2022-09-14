@@ -5,7 +5,7 @@ const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const JWT_SECKEY = process.env.JWT_SECKEY
 const bcrypt = require("bcrypt");
-const{validator, validated, validateSignin} = require('../Validator')
+const{validator, validated, validateSignin} = require('../extra/Validator')
 
 
 
